@@ -31,7 +31,7 @@ modulpic :: Int -> Int
 modulpic n = head (valid n (candidates n))
   where
     candidates m = [m, 2*m ..]
-    valid m xs = filter (checkI m) xs
+    valid m = filter (checkI m)
 
 -- 4 Реализация с map отображением
 mappedpic :: Int -> Int
