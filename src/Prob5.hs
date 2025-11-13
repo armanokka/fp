@@ -24,7 +24,7 @@ recursionpic n = go n
   where
     go i
       | checkI n i = i
-      | otherwise = go (i + n)
+      | otherwise = i + go (i + n) - i
 
 -- 3 Модульная реализация (генерация + фильтрация + свёртка)
 modulpic :: Int -> Int
